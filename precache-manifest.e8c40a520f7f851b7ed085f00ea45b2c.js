@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "570dbed68d12bf4b5aa57d5d5b7274a8",
+    "revision": "ccf5de8583710f661f6d8680bb2caad4",
     "url": "/mymari/index.html"
   },
   {
-    "revision": "d736ec04d58b16479ce0",
+    "revision": "5239d25379e12a3c4789",
     "url": "/mymari/static/css/main.92ff9fa2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mymari/static/js/2.8dedd440.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d736ec04d58b16479ce0",
-    "url": "/mymari/static/js/main.913534ce.chunk.js"
+    "revision": "5239d25379e12a3c4789",
+    "url": "/mymari/static/js/main.1ea60e35.chunk.js"
   },
   {
     "revision": "27944ed1b1d2a42f897a",
