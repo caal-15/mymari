@@ -7,7 +7,7 @@ import { getRandomNumber } from '../utils'
 import styles from './ThoughtsPage.module.sass'
 
 const ThoughtsPage = () => {
-  const [page, setPage] = useState(getRandomNumber(data.length) + 1)
+  const [page, setPage] = useState(getRandomNumber(data.length))
   const [visitedPages, setVisitedPages] = useState([])
 
   useEffect(() => {
@@ -17,10 +17,10 @@ const ThoughtsPage = () => {
   }, [page, visitedPages, setVisitedPages])
 
   const getUnvisitedPage = () => {
-    let newPage = getRandomNumber(data.length) + 1
+    let newPage = getRandomNumber(data.length)
     if (visitedPages.length < data.length) {
       while (visitedPages.some((page) => page === newPage)) {
-        newPage = getRandomNumber(data.length) + 1
+        newPage = getRandomNumber(data.length)
       }
       return newPage
     } else {
@@ -29,7 +29,7 @@ const ThoughtsPage = () => {
     }
   }
 
-  const thoughtItem = data[page - 1]
+  const thoughtItem = data[page]
   return (
     <main onClick={() => setPage(getUnvisitedPage())} className={styles.main}>
       <ThoughtCard {...thoughtItem} />
