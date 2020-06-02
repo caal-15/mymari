@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "13e16afaa81e0500caba7992f6724bb0",
+    "revision": "bd45028d75a191e2468079af17c70871",
     "url": "/mymari/index.html"
   },
   {
-    "revision": "f3b0bfc23c066e8b2599",
+    "revision": "2e6420ff9c8f77f53840",
     "url": "/mymari/static/css/main.92ff9fa2.chunk.css"
   },
   {
-    "revision": "aafb944123e3c142615c",
-    "url": "/mymari/static/js/2.7b351eec.chunk.js"
+    "revision": "07c1a39a56173f254653",
+    "url": "/mymari/static/js/2.8dedd440.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/mymari/static/js/2.7b351eec.chunk.js.LICENSE.txt"
+    "url": "/mymari/static/js/2.8dedd440.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f3b0bfc23c066e8b2599",
-    "url": "/mymari/static/js/main.413ac3cb.chunk.js"
+    "revision": "2e6420ff9c8f77f53840",
+    "url": "/mymari/static/js/main.54b9ee77.chunk.js"
   },
   {
     "revision": "27944ed1b1d2a42f897a",
