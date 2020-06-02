@@ -5,7 +5,7 @@ import ThoughtsPage from './ThoughtsPage'
 import NumberedThoughtsPage from './NumberedThoughtsPage'
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/mymari">
     <Switch>
       <Route exact path="/" component={ThoughtsPage} />
       <Route path="/numbered/:page" component={NumberedThoughtsPage} />
