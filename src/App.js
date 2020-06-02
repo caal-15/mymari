@@ -1,17 +1,15 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import ThoughtCard from './ThoughtCard'
-import data from './data.json'
+import ThoughtsPage from './ThoughtsPage'
 
-import styles from './App.module.sass'
-
-const App = () => {
-  const thoughtItem = data[0]
-  return (
-    <main className={styles.main}>
-      <ThoughtCard {...thoughtItem} />
-    </main>
-  )
-}
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={ThoughtsPage} />
+      <Route path="/:page" component={ThoughtsPage} />
+    </Switch>
+  </BrowserRouter>
+)
 
 export default App
