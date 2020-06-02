@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Redirect, useHistory } from 'react-router-dom'
 
 import ThoughtCard from '../ThoughtCard'
 import data from './data.json'
@@ -8,19 +7,12 @@ import { getRandomNumber } from '../utils'
 import styles from './ThoughtsPage.module.sass'
 
 const ThoughtsPage = () => {
-  const pathParams = useParams()
-  const history = useHistory()
-  const { page } = pathParams
-
+  const [page, setPage] = useState(getRandomNumber(data.length) + 1)
   const [visitedPages, setVisitedPages] = useState([])
 
   useEffect(() => {
-    const pageNumber = Number(page)
-    if (
-      page &&
-      !visitedPages.some((visitedPage) => visitedPage === pageNumber)
-    ) {
-      setVisitedPages([...visitedPages, pageNumber])
+    if (!visitedPages.some((visitedPage) => visitedPage === page)) {
+      setVisitedPages([...visitedPages, page])
     }
   }, [page, visitedPages, setVisitedPages])
 
@@ -37,16 +29,9 @@ const ThoughtsPage = () => {
     }
   }
 
-  if (!page) {
-    return <Redirect to={`/${getRandomNumber(data.length) + 1}`} />
-  }
-
   const thoughtItem = data[page - 1]
   return (
-    <main
-      onClick={() => history.push(`/${getUnvisitedPage()}`)}
-      className={styles.main}
-    >
+    <main onClick={() => setPage(getUnvisitedPage())} className={styles.main}>
       <ThoughtCard {...thoughtItem} />
     </main>
   )
